@@ -21,12 +21,12 @@ class CreateAccount extends React.Component {
 
   render() {
     return (
-      <form class="form" id="a-form" onSubmit={this.handleSubmit}>
-          <h2 class="form_title title">Create Account</h2>
-          <input class="form__input" id="username" type="text" placeholder="Username" name ="username" maxlength="14" value={this.state.value} onChange={this.handleChange} required/>
-          <input class="form__input" id="email" type="email" placeholder="Email" name="email" required/>
-          <input class="form__input" id="password" type="password" placeholder="Password" name="password" minlength="8" maxlength="25" required/>
-          <button class="form__button button" type='submit' name ="signup">SIGN UP</button>
+      <form className="form" id="a-form" onSubmit={this.handleSubmit}>
+          <h2 className="form_title title">Create Account</h2>
+          <input className="form__input" id="username" type="text" placeholder="Username" name ="username" maxLength="14" value={this.state.value} onChange={this.handleChange} required/>
+          <input className="form__input" id="email" type="email" placeholder="Email" name="email" required/>
+          <input className="form__input" id="password" type="password" placeholder="Password" name="password" minLength="8" maxLength="25" required/>
+          <button className="form__button button" type='submit' name ="signup">SIGN UP</button>
       </form>
     );
   }

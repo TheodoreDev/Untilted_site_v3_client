@@ -46,25 +46,25 @@ class MainPage extends React.Component {
 
   render() {
     return (
-        <div class="main">
-            <div class={this.state.aContainer} id="a-container">
+        <div className="main">
+            <div className={this.state.aContainer} id="a-container">
                 <CreateAccount></CreateAccount>
             </div>
-            <div class={this.state.bContainer} id="b-container">
+            <div className={this.state.bContainer} id="b-container">
                 <Login></Login>
             </div>
-            <div class={this.state.switchCtn} id="switch-cnt">
-                <div class={this.state.switchCircle0}></div>
-                <div class={this.state.switchCircle1}></div>
-                <div class={this.state.switchC1} id="switch-c1">
-                    <h2 class="switch__title title">Welcome Back !</h2>
-                    <p class="switch__description description">To keep connected with us please login with your personal info</p>
-                    <button class="switch__button button switch-btn" onClick={this.switchLogin}>GO TO LOG IN</button>
+            <div className={this.state.switchCtn} id="switch-cnt">
+                <div className={this.state.switchCircle0}></div>
+                <div className={this.state.switchCircle1}></div>
+                <div className={this.state.switchC1} id="switch-c1">
+                    <h2 className="switch__title title">Welcome Back !</h2>
+                    <p className="switch__description description">To keep connected with us please login with your personal info</p>
+                    <button className="switch__button button switch-btn" onClick={this.switchLogin}>GO TO LOG IN</button>
                 </div>
-                <div class={this.state.switchC2} id="switch-c2">
-                    <h2 class="switch__title title">Hello Friend !</h2>
-                    <p class="switch__description description">Enter your personal details and start journey with us</p>
-                    <button class="switch__button button switch-btn" onClick={this.switchSignin}>GO TO SIGN UP</button>
+                <div className={this.state.switchC2} id="switch-c2">
+                    <h2 className="switch__title title">Hello Friend !</h2>
+                    <p className="switch__description description">Enter your personal details and start journey with us</p>
+                    <button className="switch__button button switch-btn" onClick={this.switchSignin}>GO TO SIGN UP</button>
                 </div>
             </div>
         </div>
