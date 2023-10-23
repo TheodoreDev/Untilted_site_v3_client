@@ -1,16 +1,17 @@
-import React from 'react';
+import React from "react";
+import NavBar from "../navBar/navBar";
+import HomeContent from "./homeContent/homeContent";
+import './homePage.css'
 
-class MainPage extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
+function Home() {
+  const username = ''
 
-  render() {
-    return (
-        <p>Home</p>
-    );
-  }
+  return(
+    <>
+      <NavBar></NavBar>
+      <HomeContent></HomeContent>
+    </>
+  )
 }
 
-export default MainPage;
+export default Home

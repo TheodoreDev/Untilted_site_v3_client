@@ -1,0 +1,46 @@
+@media (max-width: 750px) {
+    .sidebar {
+        width: 78px;
+    }
+
+    .sidebar .nav-links{
+        overflow: visible;
+    }
+
+    .sidebar .logo-details .logo_name {
+        visibility: hidden;
+    }
+
+    .type-user {
+        display: block;
+    }
+
+    .sidebar .profil {
+        width: 78px;
+        display: grid;
+    }
+
+    .sidebar .profil .profil-content .pp_img {
+        padding: 10px;
+    }
+
+    .type-user {
+        display: flex;
+        justify-content: center;
+        margin-top: 5px;
+    }
+
+    .profil .form {
+        display: flex;
+        justify-content: center;
+        margin-top: 5px;
+    }
+
+    .sidebar .profil .form .button_disconnect {
+        margin: 0;
+    }
+
+    .sidebar .profil .profil-name {
+        display: none;
+    }
+}

@@ -1,0 +1,135 @@
+li{
+    position: relative;
+    list-style: none;
+    transition: all 0.4s ease;
+}
+
+.navbar_li {
+    cursor: pointer;
+}
+
+li.nowin {
+    background: #1d1b31;
+}
+
+li:hover{
+    background: #1d1b31;
+}
+
+li .icon-link{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+li i {
+    padding: 20px 0 20px 0;
+    min-width: 78px;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+li.showMenu i.arrow {
+    transform: rotate(-180deg);
+}
+
+li a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+li a .link_name{
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+}
+
+li .sub-menu {
+    padding: 6px 6px 14px 80px;
+    margin-top: -10px;
+    display: none;
+    transition: all 0.3s ease;
+}
+
+li.showMenu .sub-menu {
+    display: block;
+    transition: all 0.3s ease;
+}
+
+li .sub-menu a {
+    color: #fff;
+    font-size: 15px;
+    padding: 5px 0;
+    white-space: nowrap;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+li .sub-menu a:hover{
+    opacity: 1;
+}
+
+li .sub-menu .link_name {
+    display: none;
+}
+
+li .sub-menu.blank{
+    opacity: 0;
+    pointer-events: none;
+    padding: 3px 20px 6px 16px;
+    transition: 0s;
+}
+
+li:hover .sub-menu.blank {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@media (max-width: 750px) {
+    li .sub-menu .link_name {
+        display: none;
+    }
+
+    li .icon-link{
+        display: block;
+    }
+
+    li .sub-menu {
+        position: absolute;
+        left: 100%;
+        top: -10px;
+        margin-top: 0;
+        padding: 10px 20px;
+        border-radius: 0 6px 6px 0;
+        opacity: 0;
+        display: block;
+        pointer-events: none;
+        transition: 0s;
+        background: #1d1b31;
+    }
+
+    li a .link_name{
+        visibility: hidden;
+    }
+    
+    li:hover .sub-menu {
+        top: 0;
+        opacity: 1;
+        pointer-events: auto;
+        transition: all 0.4s ease;
+    }
+
+    li .sub-menu .link_name {
+        display: block;
+        font-size: 18px;
+        opacity: 1;
+    }
+
+    i.arrow {
+        display: none;
+    }
+}

@@ -1,0 +1,225 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: var(--bgcolor);
+}
+
+.overlay {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: var(--overlaycolor);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.4s ease-out;
+}
+
+.overlay.active {
+    visibility: visible;
+    opacity: 0.3;
+    transition: all 0.4s ease-in;
+}
+
+.deco_popup {
+    visibility: hidden;
+    position: fixed;
+    height: 0;
+    width: 0;
+    top: 50%;
+    left: -400px;
+    background: var(--bgcolor);
+    color: var(--fontcolor);
+    border-radius: 10%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    z-index: auto;
+    transition: all 0.4s ease-in;
+}
+
+.deco_popup.active {
+    width: 400px;
+    height: 200px;
+    top: calc(50% - 200px/2);
+    left: calc(50% - 400px/2);
+    visibility: visible;
+}
+
+.deco_popup .content {
+    text-align: center;
+}
+
+.deco_popup .content .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.deco_popup .content .buttons button {
+    background: red;
+    color: #fff;
+    border-radius: 20px;
+    padding: 5px;
+    border: none;
+    box-shadow: none;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.deco_popup .content .buttons .close_popup {
+    background: rgb(170, 170, 170);
+    color: #fff;
+    border-radius: 20px;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    cursor: pointer;
+}
+
+@media (max-width: 420px){
+    .deco_popup.active {
+        height: 250px;
+        width: 200px;
+        top: calc(50% - 250px/2);
+        left: calc(50% - 200px/2);
+    }
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 260px;
+    background: #11101d;
+    transition: all 0.5s ease;
+}
+
+.sidebar .logo-details {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar .logo-details i {
+    font-size: 30px;
+    color: #fff;
+    height: 50px;
+    min-width: 78px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.sidebar .logo-details .logo_name {
+    font-size: 22px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.nav-links {
+    height: 100%;
+    padding-top: 30px;
+    overflow: auto;
+}
+
+.nav-links::-webkit-scrollbar{
+    display: none;
+}
+
+.sidebar .profil {
+    position: fixed;
+    bottom: 0;
+    width: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 0;
+    transition: all 0.4s ease;
+}
+
+.sidebar .profil .profil-content {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar .profil .profil-content .pp_img {
+    height: 52px;
+    width: 52px;
+    object-fit: cover;
+    border-radius: 16px;
+    margin: 0 14px 0 12px;
+    background: #1d1b31;
+    padding: 5px;
+    transition:  all 0.5s ease;
+}
+
+.sidebar .profil .profil-content .preferences_engrenage {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    height: 52px;
+    width: 52px;
+    object-fit: cover;
+    border-radius: 16px;
+    background: rgba(29, 27, 49, 0.6);
+    margin: 0 14px 0 12px;
+    padding: 5px;
+    transition:  all 0.5s ease;
+}
+
+.sidebar .profil .profil-content .preferences_engrenage.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.pp-status{
+    display: none;
+}
+
+.sidebar .profil .profil-name,
+.sidebar .profil .type-user{
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+.dashboard {
+    text-decoration: none;
+    color: #fff;
+}
+
+.sidebar .profil .type-user{
+    font-size: 12px;
+}
+
+.theme-indicator {
+    display: none;
+}
+
+.sidebar .profil .form .button_disconnect {
+    margin-left: 10px;
+    border: none;
+    background: transparent;
+    padding: 0;
+    right: 0;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.sidebar .profil .form .button_disconnect img {
+    height: 30px;
+    width: 30px;
+    object-fit: cover;
+}
