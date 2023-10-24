@@ -1,10 +1,13 @@
 import React from "react";
+import './forumContent.css'
 
 function ForumContent() {
   const username = ''
 
   return(
-    <div><p>Forum</p></div>
+    <div className="container_forum">
+      <p>Forum</p>
+    </div>
   )
 }
 

@@ -1,10 +1,13 @@
 import React from "react";
+import './homeContent.css'
 
 function HomeContent() {
   const username = ''
 
   return(
-    <div><p>Home</p></div>
+    <div className="container_home">
+      <p>Home</p>
+    </div>
   )
 }
 

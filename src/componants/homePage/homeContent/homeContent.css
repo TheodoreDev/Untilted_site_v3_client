@@ -1,0 +1,8 @@
+.container_home {
+    width: calc(100% - 260px);
+    position: absolute;
+    left: 260px;
+    top: 0;
+    padding: 20px;
+    min-height: 100%;
+}

@@ -1,14 +1,13 @@
 import React from "react";
 import NavBar from "../navBar/navBar";
 import HomeContent from "./homeContent/homeContent";
-import './homePage.css'
 
 function Home() {
   const username = ''
 
   return(
     <>
-      <NavBar></NavBar>
+      <NavBar now="home"></NavBar>
       <HomeContent></HomeContent>
     </>
   )
