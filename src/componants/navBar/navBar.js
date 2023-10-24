@@ -33,8 +33,8 @@ function NavBar(props) {
             <ul className="nav-links">
                 <NavBarLink name="Home" img="bx bxs-grid" other_class={nowinhome} link="/home"></NavBarLink>
                 <NavBarLink name="Forums" img="bx bxs-collection" other_class={nowinforum} link="/forum"></NavBarLink>
-                <NavBarLinkSubMenu name="Apps" img="bx bx-cart-download" subsMenus="Browse-Publish"></NavBarLinkSubMenu>
-                <NavBarLinkSubMenu name="Repport" img="bx bxs-megaphone" subsMenus="A bug-An good idea"></NavBarLinkSubMenu>
+                <NavBarLinkSubMenu name="Apps" img="bx bx-cart-download" subsMenus="Browse-Publish" link="/apps"></NavBarLinkSubMenu>
+                <NavBarLinkSubMenu name="Repport" img="bx bxs-megaphone" subsMenus="A bug-An good idea" link="/repports"></NavBarLinkSubMenu>
 
                 <li>
                     <div className="profil">

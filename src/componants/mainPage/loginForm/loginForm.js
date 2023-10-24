@@ -1,15 +1,25 @@
 import React, { useState } from 'react';
 import './loginForm.css'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom';
 
 function Login() {
+  const navigate = useNavigate()
+
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
 
   function handleSubmit(event) {
     event.preventDefault();
     axios.post('http://localhost:5000/login', {username, password})
-    .then(res => console.log(res))
+    .then(res => {
+      if (res === "Login Failed") {
+        navigate("/")
+      } else {
+        navigate("/home")
+        console.log(res)
+      }
+    })
     .catch(err => console.log(err))
   }
 
