@@ -35,19 +35,35 @@ function NavBar(props) {
                         img="bx bxs-grid" 
                         other_class={nowinhome} 
                         link="/home" 
-                        user={user}>
-                    </NavBarLink>
-                    <NavBarLink name="Forums" img="bx bxs-collection" other_class={nowinforum} link="/home/forum" user={user}></NavBarLink>
-                    <NavBarLinkSubMenu name="Apps" img="bx bx-cart-download" subsMenus="Browse-Publish" link="/apps"></NavBarLinkSubMenu>
-                    <NavBarLinkSubMenu name="Repport" img="bx bxs-megaphone" subsMenus="A bug-An good idea" link="/repports"></NavBarLinkSubMenu>
+                        user={user}
+                    ></NavBarLink>
+                    <NavBarLink 
+                        name="Forums" 
+                        img="bx bxs-collection" 
+                        other_class={nowinforum} 
+                        link="/home/forum" 
+                        user={user}
+                    ></NavBarLink>
+                    <NavBarLinkSubMenu 
+                        name="Apps" 
+                        img="bx bx-cart-download" 
+                        subsMenus="Browse-Publish" 
+                        link="/apps"
+                    ></NavBarLinkSubMenu>
+                    <NavBarLinkSubMenu 
+                        name="Repport" 
+                        img="bx bxs-megaphone" 
+                        subsMenus="A bug-An good idea" 
+                        link="/repports"
+                    ></NavBarLinkSubMenu>
 
                     <li>
                         <div className="profil">
                             <div className="profil-content">
                                 <p className="pp-status">{user.pp_status}</p>
                                 <a className="preferences">
-                                    <img src="./Ressources/img/profil-default.png" alt="profile" className="pp_img"/>
-                                    <img src="./Ressources/img/engrenage_parametre.png" alt="preferences" className="preferences_engrenage"/>
+                                    <img src="/Ressources/img/profil-default.png" alt="profile" className="pp_img"/>
+                                    <img src="/Ressources/img/engrenage_parametre.png" alt="preferences" className="preferences_engrenage"/>
                                 </a>
                             </div>
                             <div className="info">
@@ -60,7 +76,7 @@ function NavBar(props) {
                                 <div className="theme-indicator">{user.theme}</div>
                             </div>
                             <div className="form">
-                                <div className="button_disconnect"><img src="./Ressources/img/log-out.png" /></div>
+                                <div className="button_disconnect"><img src="/Ressources/img/log-out.png" /></div>
                             </div>
                         </div>
                     </li>
