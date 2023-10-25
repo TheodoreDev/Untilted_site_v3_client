@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './loginForm.css'
 import axios from 'axios'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, createSearchParams } from 'react-router-dom';
 
 function Login() {
   const navigate = useNavigate()
@@ -16,8 +16,7 @@ function Login() {
       if (res === "Login Failed") {
         navigate("/")
       } else {
-        navigate("/home")
-        console.log(res)
+        navigate('/home', {state: {user: res.data}})
       }
     })
     .catch(err => console.log(err))

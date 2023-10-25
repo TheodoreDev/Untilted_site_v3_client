@@ -1,14 +1,32 @@
 import React, { useState } from 'react';
 import './createAccountForm.css'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom';
 
 function CreateAccount() {
+  const navigate = useNavigate()
+
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const [email, setEmail] = useState('')
 
+  function handleSubmit(event) {
+    event.preventDefault();
+    axios.post('http://localhost:5000/register', {username, password, email})
+    .then(res => {
+      if (res === "Register Failed" || res === "This user already exist") {
+        console.log(res)
+        navigate("/")
+      } else {
+        navigate('/')
+        console.log(res)
+      }
+    })
+    .catch(err => console.log(err))
+  }
+
   return (
-    <form className="form" id="a-form">
+    <form className="form" id="a-form" onSubmit={handleSubmit}>
         <h2 className="form_title title">Create Account</h2>
         <input className="form__input" id="username" type="text" placeholder="Username" name ="username_register" maxLength="14" 
         onChange={e => setUsername(e.target.value)} required/>
