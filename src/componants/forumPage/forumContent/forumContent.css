@@ -5,4 +5,13 @@
     top: 0;
     padding: 20px;
     min-height: 100%;
+    transition: all 0.5s ease;
+}
+
+@media (max-width: 750px) {
+    .container_forum {
+        width: calc(100% - 78px);
+        left: 78px;
+        transition: all 0.5s ease;
+    }
 }

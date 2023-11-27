@@ -1,30 +1,48 @@
-import React from "react";
+import React, { useState } from "react";
 import './navBar.css';
 import './responsive.css';
+import '../../variables.css'
 import NavBarLink from './navBarLinks/navBarLinks'
 import NavBarLinkSubMenu from './navBarLinksSubMenu/navBarLinksSubMenu'
 import { Outlet, useLocation } from "react-router-dom";
 
 function NavBar(props) {
     const {now} = props
+    const [classes, setClasses] = useState({
+        logout_popup_active: ' '
+    })
 
     const location = useLocation()
     const user = location.state.user
+    console.log(user)
 
     var type_user = "User"
+    var theme = " light-theme"
 
     if (user.admin == 1) {
         type_user = "Admin"
     }
+    if (user.theme == 1) {
+        theme = " dark-theme"
+    }
+
     if (now === "home") {
         var nowinhome = "nowin"
     } else if (now === "forum") {
         var nowinforum = "nowin"
     }
 
+    function logoutPopup() {
+        if (classes.logout_popup_active === " ") {
+            setClasses({logout_popup_active: " active"})
+        } else {
+            setClasses({logout_popup_active: " "})
+        }
+    }
+
     return(
         <>
-            <div className="sidebar">
+            <div className="sidebar ligth-theme">
                 <div className="logo-details">
                     <i className='bx bxs-file-txt'></i>
                     <span className="logo_name">Untilted.txt</span>
@@ -76,13 +94,27 @@ function NavBar(props) {
                                 <div className="theme-indicator">{user.theme}</div>
                             </div>
                             <div className="form">
-                                <div className="button_disconnect"><img src="/Ressources/img/log-out.png" /></div>
+                                <div className="button_disconnect"><img src="/Ressources/img/log-out.png"  onClick={logoutPopup}/></div>
                             </div>
                         </div>
                     </li>
                 </ul>
             </div>
-            <Outlet></Outlet>
+            <div className={theme}>
+                <Outlet></Outlet>
+            </div>
+            <div className={"overlay" + theme + classes.logout_popup_active}></div>
+            <div className={"deco_popup" + theme + classes.logout_popup_active}>
+                <div className="content">
+                    <p>Do you want to be disconnected ?</p>
+                    <div className="buttons">
+                        <form>
+                            <button type="submit">Disconnect</button>
+                        </form>
+                        <div className="close_popup" onClick={logoutPopup}>Close</div>
+                    </div>
+                </div>
+            </div>
         </>
     )
 }

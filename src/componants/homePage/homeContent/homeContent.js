@@ -5,7 +5,7 @@ function HomeContent(props) {
   const {user} = props
 
   return(
-    <div className="container_home">
+    <div className={"container_home"}>
       <p>Home</p>
     </div>
   )

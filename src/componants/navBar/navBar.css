@@ -55,14 +55,16 @@ body {
 
 .deco_popup .content {
     text-align: center;
+    display: grid;
+    justify-content: center;
+    width: 100%;
 }
 
 .deco_popup .content .buttons {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     margin-top: 15px;
-    margin-right: 15px;
-    margin-left: 15px;
 }
 
 .deco_popup .content .buttons button {
@@ -83,13 +85,15 @@ body {
     padding: 5px;
     padding-left: 15px;
     padding-right: 15px;
+    text-align: center;
+    font-size: 15px;
     cursor: pointer;
 }
 
 @media (max-width: 420px){
     .deco_popup.active {
         height: 250px;
-        width: 200px;
+        width: 220px;
         top: calc(50% - 250px/2);
         left: calc(50% - 200px/2);
     }
