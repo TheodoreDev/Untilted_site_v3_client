@@ -1,13 +1,12 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import NavBar from "../navBar/navBar";
 import HomeContent from "./homeContent/homeContent";
+import axios from 'axios'
 
 function Home() {
-  const username = ''
 
   return(
     <>
-      <NavBar now="home"></NavBar>
       <HomeContent></HomeContent>
     </>
   )

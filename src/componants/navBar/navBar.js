@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import './navBar.css';
 import './responsive.css';
+import '../../variables.css'
 import NavBarLink from './navBarLinks/navBarLinks'
 import NavBarLinkSubMenu from './navBarLinksSubMenu/navBarLinksSubMenu'
 import {loadState, saveState} from '../../helper/sessionStorage'
@@ -17,10 +18,15 @@ function NavBar(props) {
     const user = loadState(sessionkey1, [0])
 
     var type_user = "User"
+    var theme = " light-theme"
 
     if (user.admin == 1) {
         type_user = "Admin"
     }
+    if (user.theme == 1) {
+        theme = " dark-theme"
+    }
+
     if (now === "home") {
         var nowinhome = "nowin"
     } else if (now === "forum") {
@@ -28,21 +34,43 @@ function NavBar(props) {
     }
 
     return(
-        <div className="sidebar">
-            <div className="logo-details">
-                <i className='bx bxs-file-txt'></i>
-                <span className="logo_name">Untilted.txt</span>
-            </div>
-            <ul className="nav-links">
-                <NavBarLink name="Home" img="bx bxs-grid" other_class={nowinhome} link="/home"></NavBarLink>
-                <NavBarLink name="Forums" img="bx bxs-collection" other_class={nowinforum} link="/forum"></NavBarLink>
-                <NavBarLinkSubMenu name="Apps" img="bx bx-cart-download" subsMenus="Browse-Publish" link="/apps"></NavBarLinkSubMenu>
-                <NavBarLinkSubMenu name="Repport" img="bx bxs-megaphone" subsMenus="A bug-An good idea" link="/repports"></NavBarLinkSubMenu>
+            <div className="sidebar ligth-theme">
+                <div className="logo-details">
+                    <i className='bx bxs-file-txt'></i>
+                    <span className="logo_name">Untilted.txt</span>
+                </div>
+                <ul className="nav-links">
+                    <NavBarLink 
+                        name="Home" 
+                        img="bx bxs-grid" 
+                        other_class={nowinhome} 
+                        link="/home" 
+                        user={user}
+                    ></NavBarLink>
+                    <NavBarLink 
+                        name="Forums" 
+                        img="bx bxs-collection" 
+                        other_class={nowinforum} 
+                        link="/home/forum" 
+                        user={user}
+                    ></NavBarLink>
+                    <NavBarLinkSubMenu 
+                        name="Apps" 
+                        img="bx bx-cart-download" 
+                        subsMenus="Browse-Publish" 
+                        link="/apps"
+                    ></NavBarLinkSubMenu>
+                    <NavBarLinkSubMenu 
+                        name="Repport" 
+                        img="bx bxs-megaphone" 
+                        subsMenus="A bug-An good idea" 
+                        link="/repports"
+                    ></NavBarLinkSubMenu>
 
                 <li>
                     <div className="profil">
                         <div className="profil-content">
-                            <p className="pp-status"></p>
+                            <p className="pp-status">{user.pp_status}</p>
                             <a className="preferences">
                                 <img src="./Ressources/img/profil-default.png" alt="profile" className="pp_img"/>
                                 <img src="./Ressources/img/engrenage_parametre.png" alt="preferences" className="preferences_engrenage"/>
