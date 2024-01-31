@@ -15,3 +15,9 @@ export const saveState = (key,obj) => {
         sessionStorage.setItem(key, JSON.stringify(obj))
     } catch (error) {}
 }
+
+export const supState = () => {
+    try {
+        sessionStorage.clear()
+    } catch (error) {}
+}

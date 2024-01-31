@@ -44,3 +44,12 @@
         display: none;
     }
 }
+
+@media (max-width: 420px){
+    .deco_popup.active {
+        height: 250px;
+        width: 200px;
+        top: calc(50% - 250px/2);
+        left: calc(50% - 200px/2);
+    }
+}
