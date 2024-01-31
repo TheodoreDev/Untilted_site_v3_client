@@ -3,15 +3,18 @@ import './navBar.css';
 import './responsive.css';
 import NavBarLink from './navBarLinks/navBarLinks'
 import NavBarLinkSubMenu from './navBarLinksSubMenu/navBarLinksSubMenu'
+import {loadState, saveState} from '../../helper/sessionStorage'
 
 function NavBar(props) {
+    const sessionkey1 = "user"
     const {now} = props
-    const user = {
+    /*const user = {
         username: "ThéodoreAdmin",
         pp_status: "true",
         admin: 1,
         theme: 0
-    }
+    }*/
+    const user = loadState(sessionkey1, [0])
 
     var type_user = "User"
 
@@ -39,7 +42,7 @@ function NavBar(props) {
                 <li>
                     <div className="profil">
                         <div className="profil-content">
-                            <p className="pp-status">{user.pp_status}</p>
+                            <p className="pp-status"></p>
                             <a className="preferences">
                                 <img src="./Ressources/img/profil-default.png" alt="profile" className="pp_img"/>
                                 <img src="./Ressources/img/engrenage_parametre.png" alt="preferences" className="preferences_engrenage"/>
