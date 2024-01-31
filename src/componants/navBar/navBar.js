@@ -45,14 +45,12 @@ function NavBar(props) {
                         img="bx bxs-grid" 
                         other_class={nowinhome} 
                         link="/home" 
-                        user={user}
                     ></NavBarLink>
                     <NavBarLink 
                         name="Forums" 
                         img="bx bxs-collection" 
                         other_class={nowinforum} 
                         link="/home/forum" 
-                        user={user}
                     ></NavBarLink>
                     <NavBarLinkSubMenu 
                         name="Apps" 
