@@ -21,7 +21,6 @@ function CreateAccount() {
       } else {
         saveState(sessionkey1, res.data)
         navigate('/home')
-        console.log(res.data)
       }
     })
     .catch(err => console.log(err))

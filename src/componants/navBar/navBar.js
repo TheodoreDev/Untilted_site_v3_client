@@ -116,7 +116,7 @@ function NavBar() {
                     </li>
                 </ul>
             </div>
-            <div className={classes.theme}>
+            <div className={classes.theme}>z
                 <Outlet></Outlet>
             </div>
             <div className={"overlay " + classes.theme + classes.logout_popup_active}></div>
