@@ -5,11 +5,12 @@ import '../../variables.css'
 import NavBarLink from './navBarLinks/navBarLinks'
 import NavBarLinkSubMenu from './navBarLinksSubMenu/navBarLinksSubMenu'
 import {loadState, saveState, supState} from '../../helper/sessionStorage'
-import {Outlet, useNavigate} from 'react-router-dom'
+import {Outlet, useNavigate, useLocation} from 'react-router-dom'
 
 function NavBar() {
     const sessionkey1 = "user"
     const navigate = useNavigate()
+    const location = useLocation()
     /*const user = {
         username: "ThéodoreAdmin",
         pp_status: "true",
@@ -20,40 +21,35 @@ function NavBar() {
 
     const [classes, setClasses] = useState({
         logout_popup_active: ' ',
-        theme: 'light-theme '
+        theme: 'light-theme ',
+        type_user: "User"
     })
 
-    var type_user = "User"
-
-    if (user.admin == 1) {
-        type_user = "Admin"
+    if (user.admin === 1) {
+        classes.type_user = "Admin"
     }
-    if (user.theme == 1) {
-        setClasses({
-            logout_popup_active: classes.logout_popup_active,
-            theme: 'dark-theme '
-        })
+    if (user.theme === 1) {
+        classes.theme = 'dark-theme '
     }
 
     function logoutPopup() {
+        var logout_popup_active = " "
         if (classes.logout_popup_active === " ") {
-            setClasses({
-                logout_popup_active: " active",
-                theme: classes.theme
-            })
+            logout_popup_active = "active "
         } else {
-            setClasses({
-                logout_popup_active: " ",
-                theme: classes.theme
-            })
+            logout_popup_active = " "
         }
+        setClasses({
+            logout_popup_active: logout_popup_active,
+            theme: classes.theme,
+            type_user: classes.type_user
+        })
     }
 
     function logout() {
         supState()
         navigate("/")
     }
-    console.log(user.username)
 
     if(!user.username){
         return(
@@ -74,12 +70,12 @@ function NavBar() {
                 <ul className="nav-links">
                     <NavBarLink 
                         name="Home" 
-                        img="bx bxs-grid" 
+                        img="bx bxs-grid"  
                         link="/home" 
                     ></NavBarLink>
                     <NavBarLink 
                         name="Forums" 
-                        img="bx bxs-collection"  
+                        img="bx bxs-collection" 
                         link="/home/forum" 
                     ></NavBarLink>
                     <NavBarLinkSubMenu 
@@ -108,7 +104,7 @@ function NavBar() {
                                 <div className="profil-name">{user.username}</div>
                                 <div className="type-user">
                                     <a href="/dashboard" className="dashboard">
-                                        {type_user}
+                                        {classes.type_user}
                                     </a>
                                 </div>
                                 <div className="theme-indicator">{user.theme}</div>

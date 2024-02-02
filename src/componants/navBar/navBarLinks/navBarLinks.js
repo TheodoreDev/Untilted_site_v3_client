@@ -3,7 +3,7 @@ import './navBarLinks.css'
 import { Link, useNavigate } from "react-router-dom";
 
 function NavBarLink(props) {
-    const {name, img, other_class, link, user} = props
+    const {name, img, other_class, link} = props
 
     return(
       <li className={"navbar_li " + other_class}>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import '../navBarLinks/navBarLinks'
+import '../navBarLinks/navBarLinks.css'
+import { Link, useNavigate } from "react-router-dom";
 
 function NavBarLinkSubMenu(props) {
     const {name, img, other_class, subsMenus, link} = props
@@ -24,13 +25,13 @@ function NavBarLinkSubMenu(props) {
     return(
         <li className={"navbar_li " + other_class + state.showMenu}>
             <div className="icon-link">
-                <a href={link}><i className={img}></i><span className="link_name">{name}</span></a>
+                <a><i className={img}></i><span className="link_name">{name}</span></a>
                 <i className='bx bx-chevron-down arrow' onClick={toggleSubMenu} ></i>
             </div>
             <ul className="sub-menu">
-                <li><a className="link_name" href={link}>{name}</a></li>
-                <li><a>{subMenus[0]}</a></li>
-                <li><a>{subMenus[1]}</a></li>
+                <li><a className="link_name">{name}</a></li>
+                <li><a><Link to={link}>{subMenus[0]}</Link></a></li>
+                <li><a><Link to={link}>{subMenus[1]}</Link></a></li>
             </ul>
         </li>
     )
