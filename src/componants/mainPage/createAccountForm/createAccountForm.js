@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import './createAccountForm.css'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom';
+import {loadState, saveState} from '../../../helper/sessionStorage'
 
 function CreateAccount() {
   const navigate = useNavigate()
+  const sessionkey1 = "user"
 
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
@@ -16,10 +18,10 @@ function CreateAccount() {
     .then(res => {
       if (res === "Register Failed" || res === "This user already exist") {
         console.log(res)
-        navigate("/")
       } else {
-        navigate('/')
-        console.log(res)
+        saveState(sessionkey1, res.data)
+        navigate('/home')
+        console.log(res.data)
       }
     })
     .catch(err => console.log(err))
