@@ -51,6 +51,7 @@ function MainPage () {
   }
 
   return (
+    <div className='container-main'>
       <div className="main">
           <div className={classes.aContainer} id="a-container">
               <CreateAccount></CreateAccount>
@@ -73,6 +74,7 @@ function MainPage () {
               </div>
           </div>
       </div>
+    </div>  
   );
 }
 

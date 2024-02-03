@@ -95,7 +95,7 @@ function NavBar() {
                         <div className="profil">
                             <div className="profil-content">
                                 <p className="pp-status">{user.pp_status}</p>
-                                <a className="preferences">
+                                <a className="preferences" href="/account">
                                     <img src="/Ressources/img/profil-default.png" alt="profile" className="pp_img"/>
                                     <img src="/Ressources/img/engrenage_parametre.png" alt="preferences" className="preferences_engrenage"/>
                                 </a>

@@ -1,0 +1,34 @@
+.container-account {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    justify-content: center;
+    background: var(--bgcolor);
+    color: var(--fontcolor);
+}
+
+.QUIT {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 20px;
+}
+
+.QUIT a {
+    text-decoration: none;
+}
+
+.QUIT_button i {
+    font-size: 40px;
+    color: var(--fontcolor);
+}
+
+.card {
+    width: 50%;
+    border: 2px solid var(--bordercolor);
+    background: var(--containercolor);
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px var(--shadowcolor1), -10px -10px 10px var(--shadowcolor2);
+    margin: 20px 0 20px 0;
+    transition: all 0.2s ease;
+}
