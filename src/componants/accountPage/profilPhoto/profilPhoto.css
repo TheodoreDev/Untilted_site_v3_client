@@ -1,0 +1,65 @@
+h1 {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    color: var(--titlecolor);
+}
+
+.profile {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.change_profil_img {
+    border: none;
+    background: transparent;
+    cursor: default;
+    height: 200px;
+}
+
+.change_profil_img .pp {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+}
+
+.change_profil_img .pp p{
+    display: none;
+}
+
+.change_profil_img .pp img {
+    height: 200px;
+    width: 200px;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+.change_profil_img:hover .change_photo_overlay{
+    visibility: visible;
+}
+
+.change_photo_overlay {
+    visibility: hidden;
+    color: azure;
+    background: gray; 
+    opacity: 0;
+    height: 200px;
+    width: 200px;
+    border-radius: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.change_photo_overlay:hover {
+    visibility: visible;
+    opacity: 0.5;
+}
+
+.change_photo_overlay:hover i {
+    font-size: 40px;
+}
