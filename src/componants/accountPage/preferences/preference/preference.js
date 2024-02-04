@@ -35,7 +35,7 @@ function Preference(props) {
           {data === "new-password" &&
             <input type={type} name={data} class="all-input" placeholder={placeholder} />
           }
-          {data != "new-password" &&
+          {data !== "new-password" &&
             <input type={type} name={data} class="all-input" value={data_out} />
           }
       </div>
