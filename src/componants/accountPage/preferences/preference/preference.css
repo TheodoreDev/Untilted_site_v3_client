@@ -1,0 +1,23 @@
+.one_pref {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 25px;
+}
+
+.one_pref .now {
+    display: flex;
+    align-items: center;
+}
+
+.one_pref .now p {
+    padding-left: 5px;
+}
+
+.all-input {
+    padding: 5px;
+    border: 2px solid var(--fontcolor);
+    background: var(--bgcolor);
+    color: var(--fontcolor);
+    border-radius: 10px;
+}

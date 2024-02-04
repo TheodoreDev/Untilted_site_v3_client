@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import {loadState, saveState, supState} from '../../../helper/sessionStorage'
 import './profilPhoto.css'
+import '../../../variables.css'
 
 function ProfilPhoto() {
   const sessionkey1 = "user"

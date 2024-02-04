@@ -3,7 +3,7 @@
     position: absolute;
     width: 100%;
     justify-content: center;
-    background: var(--bgcolor);
+    background-color: var(--bgcolor);
     color: var(--fontcolor);
 }
 
@@ -28,7 +28,61 @@
     border: 2px solid var(--bordercolor);
     background: var(--containercolor);
     border-radius: 20px;
-    box-shadow: 10px 10px 10px var(--shadowcolor1), -10px -10px 10px var(--shadowcolor2);
     margin: 20px 0 20px 0;
     transition: all 0.2s ease;
+}
+
+.one_pref {
+    margin-top: 20px;
+}
+
+.switch-theme {
+	display: inline-block;
+	position: relative;
+	width: 70px;
+	height: 40px;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.switch-theme input {
+	position: absolute;
+	top: -30px;
+	left: -30px;
+	width: 0;
+	height: 0;
+}
+
+.switch-theme input + span {
+    position: absolute;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   background: #99b4df;
+   border-radius: 20px;
+   transition: all 0.5s;
+}
+
+.switch-theme input:checked + span {
+	background: #051125;
+}
+
+.switch-theme input + span:before {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: 4px;
+	width: 32px;
+	height: 32px;
+	background: yellow;
+	border-radius: 50%;
+	transform: translateY(-50%);
+	transition: all .5s;
+}
+
+.switch-theme input:checked + span:before {
+    background: rgb(223, 217, 217);
+	left: 34px;
 }
