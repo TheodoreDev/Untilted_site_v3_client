@@ -1,0 +1,58 @@
+@media (max-width: 1300px){
+    .overlay .pp_form_popup {
+        width: 40%;
+    }
+    .overlay_delete .delete_form_popup {
+        width: 60%;
+    }
+}
+
+@media (max-width: 1000px){
+    .overlay .pp_form_popup {
+        width: 60%;
+    }
+}
+@media (max-width: 980px){
+    .card {
+        width: 70%;
+    }
+}
+
+@media (max-width: 850px) {
+    .overlay_delete .delete_form_popup {
+        width: 70%;
+    }
+}
+
+@media (max-width: 740px){
+    .overlay .pp_form_popup {
+        width: 80%;
+    }
+    .overlay_delete .delete_form_popup {
+        width: 80%;
+    }
+}
+@media (max-width: 650px){
+    .card {
+        width: 100%;
+    }
+    .overlay_delete .delete_form_popup {
+        width: 90%;
+    }
+}
+@media (max-width: 550px){
+    .overlay .pp_form_popup {
+        width: 100%;
+    }
+    .overlay_delete .delete_form_popup {
+        width: 100%;
+    }
+    .delete_form_popup .secu form {
+        font-size: 10px;
+    }
+}
+@media (max-width: 480px){
+    .one_pref .now p {
+        display: none;
+    }
+}

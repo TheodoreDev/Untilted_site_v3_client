@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import './accountPage.css'
 import '../../variables.css'
+import './responsive.css'
 import ProfilPhoto from './profilPhoto/profilPhoto'
 import Preferences from './preferences/preferences'
 import DangerZone from './dangerZone/dangerZone'
