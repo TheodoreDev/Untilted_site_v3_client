@@ -2,6 +2,7 @@
     --bgcolor: var(--white);
     --containercolor: var(--white);
     --fontcolor: var(--black);
+    --font-color2: var(--color-light-grey);
     --titlecolor: var(--c444444);
     --shadowcolor1: var(--d1d9e6);
     --shadowcolor2: var(--white);
@@ -13,6 +14,7 @@
     --bgcolor: var(--greyDark);
     --containercolor: var(--grey);
     --fontcolor: var(--white);
+    --font-color2: var(--white);
     --titlecolor: var(--white);
     --shadowcolor1: var(--transparent);
     --shadowcolor2: var(--transparent);
@@ -46,6 +48,7 @@
     --color-light: rgba(132, 139, 200, 0.18);
     --color-dark-variant: #677483;
     --color-background: #f6f6f9;
+    --color-light-grey: #838688;
 
     --card-border-radius: 2rem;
     --border-radius-1: 0.4rem;

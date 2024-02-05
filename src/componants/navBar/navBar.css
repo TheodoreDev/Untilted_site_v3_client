@@ -100,6 +100,8 @@ body {
     background: #11101d;
     transition: all 0.5s ease;
     z-index: 4;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .sidebar .logo-details {
@@ -147,6 +149,10 @@ body {
 .sidebar .profil .profil-content {
     display: flex;
     align-items: center;
+}
+
+.sidebar .profil {
+    margin-bottom: 15px;
 }
 
 .sidebar .profil .profil-content .pp_img {
@@ -219,4 +225,12 @@ body {
     height: 30px;
     width: 30px;
     object-fit: cover;
+}
+
+.not-logged {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
 }

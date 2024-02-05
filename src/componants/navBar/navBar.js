@@ -54,7 +54,7 @@ function NavBar() {
     if(!user.username){
         return(
             <>
-            <div>
+            <div className="not-logged">
                 <p>You are not loged</p>
             </div>
             </>
@@ -95,7 +95,7 @@ function NavBar() {
                         <div className="profil">
                             <div className="profil-content">
                                 <p className="pp-status">{user.pp_status}</p>
-                                <a className="preferences" href="/account">
+                                <a className="account" href="/account">
                                     <img src="/Ressources/img/profil-default.png" alt="profile" className="pp_img"/>
                                     <img src="/Ressources/img/engrenage_parametre.png" alt="preferences" className="preferences_engrenage"/>
                                 </a>
@@ -116,7 +116,7 @@ function NavBar() {
                     </li>
                 </ul>
             </div>
-            <div className={classes.theme}>z
+            <div className={classes.theme}>
                 <Outlet></Outlet>
             </div>
             <div className={"overlay " + classes.theme + classes.logout_popup_active}></div>

@@ -87,3 +87,11 @@
     background: rgb(223, 217, 217);
 	left: 34px;
 }
+
+.not-logged {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+}

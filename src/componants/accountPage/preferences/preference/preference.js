@@ -27,16 +27,16 @@ function Preference(props) {
 
   return(
     <>
-      <div class="one_pref">
-          <div class="now">
+      <div className="one_pref">
+          <div className="now">
               <h3>{title} :</h3>
               <p>{data_out}</p>
           </div>
           {data === "new-password" &&
-            <input type={type} name={data} class="all-input" placeholder={placeholder} />
+            <input type={type} name={data} className="all-input" placeholder={placeholder} />
           }
           {data !== "new-password" &&
-            <input type={type} name={data} class="all-input" value={data_out} />
+            <input type={type} name={data} className="all-input" value={data_out} />
           }
       </div>
     </>

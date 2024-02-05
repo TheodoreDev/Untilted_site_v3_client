@@ -9,14 +9,14 @@ function ProfilPhoto() {
 
     return(
       <>
-        <div class="profile">
-            <button class="change_profil_img">
-                <div class="pp">
-                    <p class="pp-status">{user.pp_status}</p>
-                    <img src="/Ressources/img/profil-default.png" alt="profile" class="pp_img"/>
+        <div className="profile">
+            <button className="change_profil_img">
+                <div className="pp">
+                    <p className="pp-status">{user.pp_status}</p>
+                    <img src="/Ressources/img/profil-default.png" alt="profile" className="pp_img"/>
                 </div>
-                <div class="change_photo_overlay">
-                    <i class='bx bxs-camera-plus'></i>
+                <div className="change_photo_overlay">
+                    <i className='bx bxs-camera-plus'></i>
                 </div>
             </button>
         </div>

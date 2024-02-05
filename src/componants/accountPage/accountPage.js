@@ -32,7 +32,6 @@ function Account() {
     if(classes.theme_classe === 'light') {
       axios.post('http://localhost:5000/change-theme', {classes, username})
       .then(res => {
-        console.log(res.data)
         saveState(sessionkey1, res.data)
         navigate("/account")
         setClasses({
@@ -44,7 +43,6 @@ function Account() {
     } else {
       axios.post('http://localhost:5000/change-theme', {classes, username})
       .then(res => {
-        console.log(res.data)
         saveState(sessionkey1, res.data)
         navigate("/account")
         setClasses({
@@ -56,34 +54,44 @@ function Account() {
     }
   }
 
-  return(
-    <>
-    <div className={"container-account " + `${classes.theme_classe}-theme`}>
-      <div className="QUIT">
-        <a href="/home" className="QUIT_button"><i class='bx bx-left-arrow-circle'></i></a>
+  if(!user.username) {
+    return(
+      <>
+      <div className="not-logged">
+          <p>You are not logged</p>
       </div>
-      <div className="card">
-        <h1 class="UserName" name="username">{user.username}</h1>
-        <ProfilPhoto></ProfilPhoto>
-        <hr></hr>
-          <div class="one_pref">
-            <div class="now">
-                <h3>Theme :</h3>
-                <p>{classes.theme}</p>
+      </>
+    )
+  } else {
+    return(
+      <>
+      <div className={"container-account " + `${classes.theme_classe}-theme`}>
+        <div className="QUIT">
+          <a href="/home" className="QUIT_button"><i class='bx bx-left-arrow-circle'></i></a>
+        </div>
+        <div className="card">
+          <h1 className="UserName" name="username">{user.username}</h1>
+          <ProfilPhoto></ProfilPhoto>
+          <hr></hr>
+            <div className="one_pref">
+              <div className="now">
+                  <h3>Theme :</h3>
+                  <p>{classes.theme_classe}</p>
+              </div>
+              <label className="switch-theme">
+                <input type="checkbox" name="theme" className="theme-switcher" onClick={switchTheme} checked={classes.check_theme}/>
+                <span></span>
+              </label>
             </div>
-            <label class="switch-theme">
-              <input type="checkbox" name="theme" class="theme-switcher" onClick={switchTheme} checked={classes.check_theme}/>
-              <span></span>
-            </label>
-          </div>
-        <hr></hr>
-        <Preferences></Preferences>
-        <hr></hr>
-        <DangerZone></DangerZone>
+          <hr></hr>
+          <Preferences></Preferences>
+          <hr></hr>
+          <DangerZone></DangerZone>
+        </div>
       </div>
-    </div>
-    </>
-  )
+      </>
+    )
+  }
 }
 
 export default Account

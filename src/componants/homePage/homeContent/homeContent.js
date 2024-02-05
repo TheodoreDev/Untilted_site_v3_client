@@ -1,5 +1,6 @@
 import * as React from "react"
 import './homeContent.css'
+import '../../navBar/responsive.css'
 
 function HomeContent() {
 

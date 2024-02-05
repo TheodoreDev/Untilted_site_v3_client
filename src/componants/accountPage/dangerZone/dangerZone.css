@@ -1,0 +1,82 @@
+.delete-account {
+    display: grid;
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    justify-items: center;
+}
+
+.delete-account h3 {
+    width: auto;
+    padding-bottom: 30px;
+}
+
+.button_delete {
+    visibility: hidden;
+    opacity: 0;
+    width: 200px;
+    background: red;
+    padding: 10px 25px 10px 25px;
+    border: 2px solid rgb(170, 13, 13);
+    border-radius: 30px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button_delete.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.delete-account form {
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    margin-top: 35px;
+}
+
+.delete-account form.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.delete-account .cancel-delete {
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.delete-account form .data-to-delete {
+    display: grid;
+    justify-items: center;
+}
+
+.delete-input {
+    padding: 5px;
+    border: 2px solid var(--fontcolor);
+    background: var(--bgcolor);
+    color: var(--fontcolor);
+    border-radius: 10px;
+}
+
+.delete-input.sentence {
+    width: 100%;
+}
+
+.delete-account form .confirm-delete {
+    height: 40px;
+    margin-left: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.delete-account form .confirm-delete img {
+    width: 40px;
+    height: auto;
+}

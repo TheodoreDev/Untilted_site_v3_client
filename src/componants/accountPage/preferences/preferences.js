@@ -31,7 +31,7 @@ function Preferences() {
           <Preference title="Email" data="email" type="email"></Preference>
           <Preference title="Birthday" data="birthday" type="date"></Preference>
           <Preference title="Password" data="new-password" type="password"></Preference>
-          <div class="button_change">
+          <div className="button_change">
             <button type="button" className={"apply-preferences " + classes.button_save} onClick={saveChanges}>Apply Changes</button>
             <div className={"confirm-preferences " + classes.input_save}>
               <img src="/Ressources/img/arrow-back.svg" className="cancel-change" onClick={saveChanges}/>

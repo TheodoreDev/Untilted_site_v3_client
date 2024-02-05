@@ -1,12 +1,15 @@
 .container_home {
     width: calc(100% - 260px);
     background-color: var(--bgcolor);
+    color: var(--font-color2);
     position: absolute;
     left: 260px;
     top: 0;
     padding: 20px;
     min-height: 100%;
     transition: all 0.5s ease;
+    -webkit-user-select: auto;
+    user-select: auto;
 }
 
 @media (max-width: 750px) {
