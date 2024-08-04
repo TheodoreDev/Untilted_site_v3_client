@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import './navBar.css';
-import './responsive.css';
 import '../../variables.css'
 import NavBarLink from './navBarLinks/navBarLinks'
 import NavBarLinkSubMenu from './navBarLinksSubMenu/navBarLinksSubMenu'

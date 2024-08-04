@@ -234,3 +234,59 @@ body {
     width: 100%;
     min-height: 100vh;
 }
+
+@media (max-width: 750px) {
+    .sidebar {
+        width: 78px;
+    }
+
+    .sidebar .nav-links{
+        overflow: visible;
+    }
+
+    .sidebar .logo-details .logo_name {
+        visibility: hidden;
+    }
+
+    .type-user {
+        display: block;
+    }
+
+    .sidebar .profil {
+        width: 78px;
+        display: grid;
+    }
+
+    .sidebar .profil .profil-content .pp_img {
+        padding: 10px;
+    }
+
+    .type-user {
+        display: flex;
+        justify-content: center;
+        margin-top: 5px;
+    }
+
+    .profil .form {
+        display: flex;
+        justify-content: center;
+        margin-top: 5px;
+    }
+
+    .sidebar .profil .form .button_disconnect {
+        margin: 0;
+    }
+
+    .sidebar .profil .profil-name {
+        display: none;
+    }
+}
+
+@media (max-width: 420px){
+    .deco_popup.active {
+        height: 250px;
+        width: 200px;
+        top: calc(50% - 250px/2);
+        left: calc(50% - 200px/2);
+    }
+}
