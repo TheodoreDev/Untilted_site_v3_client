@@ -8,6 +8,52 @@
     transition: all 0.5s ease;
 }
 
+.suggestions {
+    height: auto;
+    width: 100%;
+    display: grid;
+    justify-items: center;
+}
+
+.forum-suggestion {
+    height: 120px;
+    width: 90%;
+    background: rgba(187, 187, 187, 0.274);
+    margin: 15px;
+    border: 2px solid rgba(212, 212, 212, 0.808);
+    border-radius: 20px;
+    display: flex;
+}
+
+.info-suggestion {
+    width: 50%;
+    height: 100%;
+    display: grid;
+    justify-items: left;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.info-author {
+    width: 50%;
+    height: 100%;
+    display: grid;
+    justify-items: right;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.profil-photo {
+    background-color: gray;
+    height: 50px;
+    width: 50px;
+    border-radius: 10%;
+}
+
+.author-pseudo {
+    cursor: pointer;
+}
+
 @media (max-width: 750px) {
     .container_forum {
         width: calc(100% - 78px);
