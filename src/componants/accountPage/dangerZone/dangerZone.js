@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import './dangerZone.css'
 import axios from 'axios'
-import { loadState, supState } from "../../../helper/sessionStorage";
+import { loadState, clearState } from "../../../helper/sessionStorage";
 import { useNavigate } from 'react-router-dom';
 
 function DangerZone() {
@@ -36,7 +36,7 @@ function DangerZone() {
       axios.post('http://localhost:5000/delete-user', {username, password_to_delete, verify_char})
       .then(res => {
         if(res.data === "Delete user") {
-          supState()
+          clearState()
           navigate('/')
           alert("User delete")
         } else {

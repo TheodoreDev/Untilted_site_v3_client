@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import './loginForm.css'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom';
-import {loadState, saveState} from '../../../helper/sessionStorage'
+import {loadState, saveState, addState} from '../../../helper/sessionStorage'
 
 function Login() {
   const sessionkey1 = "user"
+  const pagekey1 = "page"
   const navigate = useNavigate()
 
   const [username, setUsername] = useState('')
@@ -19,8 +20,8 @@ function Login() {
         navigate("/")
       } else {
         navigate("/home")
-        console.log(res)
         saveState(sessionkey1, res.data)
+        addState(pagekey1, {page: "home"})
       }
     })
     .catch(err => console.log(err))

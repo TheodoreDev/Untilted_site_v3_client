@@ -3,7 +3,7 @@ import './navBar.css';
 import '../../variables.css'
 import NavBarLink from './navBarLinks/navBarLinks'
 import NavBarLinkSubMenu from './navBarLinksSubMenu/navBarLinksSubMenu'
-import {loadState, saveState, supState} from '../../helper/sessionStorage'
+import {loadState, saveState, clearState} from '../../helper/sessionStorage'
 import {Outlet, useNavigate, useLocation} from 'react-router-dom'
 
 function NavBar() {
@@ -46,7 +46,7 @@ function NavBar() {
     }
 
     function logout() {
-        supState()
+        clearState()
         navigate("/")
     }
 

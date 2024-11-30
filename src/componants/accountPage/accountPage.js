@@ -6,11 +6,12 @@ import ProfilPhoto from './profilPhoto/profilPhoto'
 import Preferences from './preferences/preferences'
 import DangerZone from './dangerZone/dangerZone'
 import axios from 'axios'
-import {loadState, saveState, supState} from '../../helper/sessionStorage'
+import {loadState, saveState, clearState} from '../../helper/sessionStorage'
 import {useNavigate} from 'react-router-dom'
 
 function Account() {
   const sessionkey1 = "user"
+  const pagekey1 = "page"
   const navigate = useNavigate()
 
   const user = loadState(sessionkey1, [0])
@@ -54,6 +55,9 @@ function Account() {
     }
   }
 
+  const act_page = loadState(pagekey1, [0])
+  console.log(act_page)
+
   if(!user.username) {
     return(
       <>
@@ -67,7 +71,7 @@ function Account() {
       <>
       <div className={"container-account " + `${classes.theme_classe}-theme`}>
         <div className="QUIT">
-          <a href="/home" className="QUIT_button"><i class='bx bx-left-arrow-circle'></i></a>
+          <a href={"/" + act_page.page} className="QUIT_button"><i class='bx bx-left-arrow-circle'></i></a>
         </div>
         <div className="card">
           <h1 className="UserName" name="username">{user.username}</h1>
