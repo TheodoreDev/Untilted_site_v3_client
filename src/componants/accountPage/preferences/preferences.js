@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {loadState, saveState, supState} from '../../../helper/sessionStorage'
+import {loadState, addState, removeState} from '../../../helper/sessionStorage'
 import './preferences.css'
 import './preference.css'
 import '../../../variables.css'
@@ -46,7 +46,7 @@ function Preferences() {
       } else {
         navigate("/account")
         console.log(res)
-        saveState(sessionkey1, res.data)
+        addState(sessionkey1, res.data)
       }
     })
     .catch(err => console.log(err))

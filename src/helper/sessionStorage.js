@@ -10,13 +10,6 @@ export const loadState = (key,defaultValue) => {
     }
 }
 
-export const saveState = (key,obj) => {
-    try {
-        sessionStorage.clear()
-        sessionStorage.setItem(key, JSON.stringify(obj))
-    } catch (error) {}
-}
-
 export const addState = (key,obj) => {
     try {
         sessionStorage.setItem(key, JSON.stringify(obj))

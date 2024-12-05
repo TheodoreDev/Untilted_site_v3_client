@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './createAccountForm.css'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom';
-import {loadState, saveState} from '../../../helper/sessionStorage'
+import {loadState, addState} from '../../../helper/sessionStorage'
 
 function CreateAccount() {
   const navigate = useNavigate()
@@ -19,7 +19,7 @@ function CreateAccount() {
       if (res === "Register Failed" || res === "This user already exist") {
         console.log(res)
       } else {
-        saveState(sessionkey1, res.data)
+        addState(sessionkey1, res.data)
         navigate('/home')
       }
     })

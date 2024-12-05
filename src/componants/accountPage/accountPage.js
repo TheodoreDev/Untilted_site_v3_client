@@ -6,7 +6,7 @@ import ProfilPhoto from './profilPhoto/profilPhoto'
 import Preferences from './preferences/preferences'
 import DangerZone from './dangerZone/dangerZone'
 import axios from 'axios'
-import {loadState, saveState, clearState} from '../../helper/sessionStorage'
+import {loadState, addState, clearState} from '../../helper/sessionStorage'
 import {useNavigate} from 'react-router-dom'
 
 function Account() {
@@ -14,6 +14,7 @@ function Account() {
   const pagekey1 = "page"
   const navigate = useNavigate()
 
+  const act_page = loadState(pagekey1, [0])
   const user = loadState(sessionkey1, [0])
   const [classes, setClasses] = useState({
     theme_classe: 'light',
@@ -33,7 +34,7 @@ function Account() {
     if(classes.theme_classe === 'light') {
       axios.post('http://localhost:5000/change-theme', {classes, username})
       .then(res => {
-        saveState(sessionkey1, res.data)
+        addState(sessionkey1, res.data)
         navigate("/account")
         setClasses({
           theme_classe: 'dark',
@@ -44,7 +45,7 @@ function Account() {
     } else {
       axios.post('http://localhost:5000/change-theme', {classes, username})
       .then(res => {
-        saveState(sessionkey1, res.data)
+        addState(sessionkey1, res.data)
         navigate("/account")
         setClasses({
           theme_classe: 'light',
@@ -54,9 +55,6 @@ function Account() {
       })
     }
   }
-
-  const act_page = loadState(pagekey1, [0])
-  console.log(act_page)
 
   if(!user.username) {
     return(
