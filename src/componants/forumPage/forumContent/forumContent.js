@@ -1,7 +1,10 @@
 import React from "react";
 import './forumContent.css'
+import '../../../variables.css'
 import ForumSuggestion from './forumSuggestion/forumSuggestion.js';
 import ForumMostView from './forumMostView/forumMostView.js';
+import Button from '@mui/material/Button';
+import Stack from '@mui/material/Stack';
 
 function ForumContent() {
   const suggestions_name_list = ["test1", "test2", "test3"]
@@ -58,6 +61,11 @@ function ForumContent() {
             pseudo={most_view_pseudo_list[2]}
           ></ForumMostView>
         </div>
+      </div>
+      <div className="new-forum-button-container">
+        <Button variant="contained" href="/new-forum" className="new-forum-button">
+          New Forum
+        </Button>
       </div>
     </div>
   )

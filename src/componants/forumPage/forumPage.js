@@ -1,5 +1,6 @@
 import React from "react";
 import ForumContent from "./forumContent/forumContent";
+import './forumPage.css'
 import {addState, removeState} from "../../helper/sessionStorage"
 
 function Forum() {
