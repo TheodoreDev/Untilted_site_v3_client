@@ -89,6 +89,11 @@ function NavBar() {
                         subsMenus="A bug-An good idea" 
                         link="/repports"
                     ></NavBarLinkSubMenu>
+                    <NavBarLink 
+                        name="RspGUI" 
+                        img="bx  bx-server" 
+                        link="/home/rspgui"
+                    ></NavBarLink>
 
                     <li>
                         <div className="profil">
